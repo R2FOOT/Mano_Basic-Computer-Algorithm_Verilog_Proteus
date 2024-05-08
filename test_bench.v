@@ -22,11 +22,7 @@ reg RW_memory;
 reg [7:0] DataIN_tb;
 wire [7:0] DataBus_tb;
 
-//reg IR_INC; 
-//reg IR_CLR; 
-//reg IR_LD; 
-//reg [7:0] IR_IN;
-//reg [3:0] IR_address_nibble;
+
 reg [7:0] Decoded_OPcode;
 reg I_bit;
 
@@ -50,7 +46,6 @@ wire [7:0] DR_OUT;
 
 
 initial begin
-    //timing = 8'b0;
     
     CLK = 1'b1;
     
@@ -91,16 +86,7 @@ AR_address_register AR (
     .AR_input(AR_IN),
     .AR_output(AR_OUT)   
 );
-/*
-IR_instruction_register IR(
-    .input_data(DataBus_tb),   
-    .T1(timing[1]),                 
-    .T2(timing[2]),                  
-    .address_register(IR_address_nibble),   
-    .D(Decoded_OPcode),            
-    .I(I_bit)                 
-);
-*/
+
 RAM ram_t(
     .address(AR_OUT),
     .CLK(CLK),
@@ -111,6 +97,7 @@ RAM ram_t(
 register_reference_instructions AC_instructions(
     .CLK(CLK),
     .r(r),
+    .T3(timing[3]),
     .B(AR_OUT),
     .clear_AC(AC_CLR),
     .COM_AC(AC_COM),
@@ -198,7 +185,7 @@ always @(posedge timing[4])
             AR_IN <= DataBus_tb[3:0];
             AR_LD <= 1'b1;
             #1 
-            DR_IN <= DataBus_tb[3:0];
+            DR_IN <= DataBus_tb[7:0];
             AR_LD <= 1'b0;
         end else if (Decoded_OPcode[3]) begin   // STA (Store Accumulator)
            RW_memory <= 1'b0;
