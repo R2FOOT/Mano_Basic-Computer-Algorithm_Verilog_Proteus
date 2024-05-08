@@ -3,6 +3,7 @@
 module register_reference_instructions(
     input wire CLK,
     input wire r,
+    input wire T3,
     input [3:0] B,
     output reg clear_AC,
     output reg COM_AC,
@@ -16,7 +17,7 @@ initial begin
     CIL_AC = 0;
 end
 
-always @(posedge CLK) begin
+    always @(posedge T3) begin
     if(r == 1) begin
         if (B[0]) begin
             clear_AC = 1;
