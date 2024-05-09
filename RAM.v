@@ -13,7 +13,7 @@ module RAM(
     $readmemh("D:/memory_content.txt", stored_memory_bytes);
     end
     
-    always @(posedge CLK) begin
+    always @(*) begin
         if(!R_W) begin
             stored_memory_bytes[address] = Data_Bus;
         end else begin
