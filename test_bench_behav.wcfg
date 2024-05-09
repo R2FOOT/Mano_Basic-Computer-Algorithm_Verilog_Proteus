@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_bench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_bench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="543916666fs"></ZoomStartTime>
+      <ZoomEndTime time="599216667fs"></ZoomEndTime>
+      <Cursor1Time time="590000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="71"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/test_bench/timing" type="array">
+      <obj_property name="ElementShortName">timing[7:0]</obj_property>
+      <obj_property name="ObjectShortName">timing[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/PC_IN" type="array">
+      <obj_property name="ElementShortName">PC_IN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_IN[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/PC_OUT" type="array">
+      <obj_property name="ElementShortName">PC_OUT[3:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_OUT[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/AR_IN" type="array">
+      <obj_property name="ElementShortName">AR_IN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AR_IN[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/AR_OUT" type="array">
+      <obj_property name="ElementShortName">AR_OUT[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AR_OUT[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/DataIN_tb" type="array">
+      <obj_property name="ElementShortName">DataIN_tb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DataIN_tb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/DataBus_tb" type="array">
+      <obj_property name="ElementShortName">DataBus_tb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DataBus_tb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/Decoded_OPcode" type="array">
+      <obj_property name="ElementShortName">Decoded_OPcode[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Decoded_OPcode[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/I_bit" type="logic">
+      <obj_property name="ElementShortName">I_bit</obj_property>
+      <obj_property name="ObjectShortName">I_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/AC_IN" type="array">
+      <obj_property name="ElementShortName">AC_IN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">AC_IN[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/AC_OUT" type="array">
+      <obj_property name="ElementShortName">AC_OUT[7:0]</obj_property>
+      <obj_property name="ObjectShortName">AC_OUT[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/DR_IN" type="array">
+      <obj_property name="ElementShortName">DR_IN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DR_IN[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/DR_OUT" type="array">
+      <obj_property name="ElementShortName">DR_OUT[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DR_OUT[7:0]</obj_property>
+   </wvobject>
+</wave_config>
