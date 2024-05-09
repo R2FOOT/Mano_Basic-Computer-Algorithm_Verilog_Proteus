@@ -130,7 +130,7 @@ assign DataBus_tb = RW_memory ? 'hzz : DataIN_tb;
 
 always @(posedge CLK) begin
     timing = timing_signals;
-    r = Decoded_OPcode[7] && timing[3] && (~I_bit);
+    r = Decoded_OPcode[7] && timing[3];
     indirect_memory = (~Decoded_OPcode[7]) && timing[3] && I_bit;
     direct_memory = (~Decoded_OPcode[7]) && timing[3] && (~I_bit);
 end 
@@ -183,10 +183,9 @@ always @(posedge timing[4])
     begin
         if(Decoded_OPcode[0] || Decoded_OPcode[1] || Decoded_OPcode[2]) begin
             AR_IN <= DataBus_tb[3:0];
-            AR_LD <= 1'b1;
-            #1 
+            AR_LD <= 1'b1; 
             DR_IN <= DataBus_tb[7:0];
-            AR_LD <= 1'b0;
+            #1 AR_LD <= 1'b0;
         end else if (Decoded_OPcode[3]) begin   // STA (Store Accumulator)
            RW_memory <= 1'b0;
            DataIN_tb <= AC_OUT;
